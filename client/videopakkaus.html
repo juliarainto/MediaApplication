@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <link rel="manifest" href="./manifest.json" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compress Videos</title>
+  <meta name="description" content="Easy to use media compressor">
+  <meta name="theme-color" content="#2bbbad" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="brand-logo hide-on-med-and-down">Media Compressor</h1>
+      <ul class="nav-mobile">
+        <li id="active_page" class="rightNav">
+          <a href="./videopakkaus.html">Video Compressor</a>
+        </li>
+      </ul>
+      <ul class="nav-mobile">
+        <li class="leftNav">
+          <a href="./index.html">Image Compressor</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section class="slider">
+    <ul class="slides" style="height: 300px">
+      <li>
+        <img src="./content/img/feather.jpeg" alt="">
+        <div class="caption right-align">
+          <h2>Video Compressor</h2>
+          <h5 class="light grey-text text-lighten-3 hide-on-small-only">Try also our image compressor!</h5>
+          <a href="./index.html" class="btn btn-large">Try it out!</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <div class="container">
+    <div class="top-content">
+      <h3>Choose video for upload:</h3>
+      <h5>
+        <span class="teal-text"> Compressing video before uploading it into your website</span>
+        <br>will result faster page loading times and user experience.
+      </h5>
+
+      <br>
+      <br>
+      <p>Application will automatically give ideal compressratios.</p>
+      <label>Application runs on demo server.</label>
+      <br>
+      <br>
+      <form action="#">
+        <p>
+          <input type="file" class="dropify" data-allowed-file-extensions="MP4 mp4 AVI avi FLV flv WMV wmv MOV mov WEBM webm OGV ogv"
+            data-height="300" id="fileInputCompress" data-max-file-size="" required/>
+        </p>
+        <label>Supported file formats: AVI, FLV, MP4, MOV, OGV, WEBM, WMV</label>
+        <br>
+        <br>
+        <div class="row s12">
+
+          <div class="input-field col s12">
+            <select id="outputExtensionType">
+              <option value="" disabled selected>Choose fileformat (Optional)</option>
+              <option value="avi">AVI </option>
+              <option value="flv">FLV </option>
+              <option value="mov">MOV </option>
+              <option value="mp4">MP4 </option>
+              <option value="ogv">OGV </option>
+              <option value="webm">WEBM </option>
+              <option value="wmv">WMV </option>
+            </select>
+            <label>You can change fileformat</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select id="chooseVideoResolution">
+              <option value="" disabled selected>Choose resolution (Optional)</option>
+              <option value="3840x?">2160p (4k): 3840x2160 </option>
+              <option value="2560x?">1440p (2k): 2560x1440 </option>
+              <option value="1920x?">1080p: 1920x1080 </option>
+              <option value="1280x?">720p: 1280x720 </option>
+              <option value="854x?">480p: 854x480 </option>
+              <option value="640x?">360p: 640x360 </option>
+              <option value="426x?">240p: 426x240 </option>
+              <option value="muu">Other</option>
+            </select>
+            <label>You can change resolution</label>
+          </div>
+        </div>
+        <div class="row" id="muu-koko" style=" display: none">
+          <div class="input-field col s6">
+            <input placeholder=" Give wanted resolution: (1920)" id="widthFront" type="number" min="0" max="3840" class="validate" required>
+            <label for="widthFront">Syötä haluttu kuvakoko </label>
+          </div>
+          <div class="input-field col s6">
+            <input placeholder=" Give wanted resolution: (1080)" id="heightFront" type="number" min="0" max="2160" class="validate" required>
+            <label for="heightFront"> </label>
+          </div>
+        </div>
+      </form>
+
+      <div id="aspectRatio" class="switch" style="display: none">
+        <label>Choose aspect ratio:</label>
+        <label>
+          16:9 (Horizontal)
+          <input id="checkedRatio" disable type="checkbox">
+          <span class="lever"></span>
+          9:16 (Vertical)
+        </label>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col s6 left-align">
+          <button class="waves-effect waves-light btn-large" type="button" id="uploadCompressButton">Compress Files!</button>
+        </div>
+        <div class="col s6 right-align">
+          <button class="waves-effect waves-light btn-large red lighten-3" id="resetButton">Clear Options</button>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+  <section id="gallery" class="section section-gallery scrollspy">
+    <div class="container2">
+      <h4 class="center">
+        <span class="teal-text">Compressed </span> Video
+      </h4>
+      <div class="center-align">
+        <div id='spinn' class="progress">
+          <div class="indeterminate"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="center-align">
+          <div id="video-items">
+            <div class="center-align">
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5>Contact</h5>
+          <p style="font-weight: bold">City</p>
+          <p>Adress</p>
+          <p style="font-weight: bold">Phone</p>
+          <br>
+        </div>
+        <div class="col l4 offset-l1 s12">
+          <div id="navi">
+            <h5>Navigate</h5>
+            <ul>
+              <li>
+                <a href="./index.html">Image Compressor</a>
+              </li>
+              <li>
+                <a href="./videopakkaus.html">Video Compressor</a>
+              </li>
+              <li>
+                <a href="https://www.juliarainto.com">About me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container" style="padding: 10px;">
+        <p id="copyright" class="col l6 s12 left">© 2018 Julia Rainto</p>
+        <img class="firmLogo" class="col l4 offset-l2 s12 right" src="#" alt="" />
+        <img class="firmLogo" class="col l4 offset-l2 s12 right" src="#" alt="" />
+      </div>
+    </div>
+  </footer>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="content/css/style.css" />
+  <link type="text/css" rel="stylesheet" href="./materialize/css/materialize.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="./dropify/css/dropify.css">
+  <link href="./dropify/fonts/*">
+
+  <script src="./content/js/jquery-3.2.1.min.js"></script>
+  <script src="./content/js/polyfill.min.js"></script>
+  <script src="./content/js/uuidlatest.js"></script>
+  <script src="./content/js/filesaver.js"></script>
+  <script src="./content/js/video.js"></script>
+  <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="./dropify/js/dropify.js"></script>
+  <script src="./sweetalert/sweetalert.min.js"></script>
+</body>
+
+</html>

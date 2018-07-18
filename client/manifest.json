@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Media Compressor",
+  "description": "Easy to use media compressor",
+  "version": "1.0",
+  "lang": "fi",
+  "icons": [{
+      "src": "/img/cropped-narwhalicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/cropped-narwhalicon-270x270.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "dir": "ltr",
+  "scope": "/apps/...",
+  "display": "minimal-ui",
+  "start_url": "https://your_address_path.com/",
+  "short_name": "Media Compressor",
+  "theme_color": "#2bbbad",
+  "orientation": "any",
+  "background_color": "#2bbbad",
+  "related_applications": [],
+  "prefer_related_applications": false
+}
