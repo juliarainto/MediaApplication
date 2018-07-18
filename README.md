@@ -1,3 +1,13 @@
+# Media Compressor
+
+Client-side: HTML, CSS, JavaScript, jQuery
+
+Server-side: Node.js, Express
+
+Demo here: https://juliarainto.com/apps/mediapakkaaja
+
+```
+
 ```
 Start
 > npm install -g http-server
