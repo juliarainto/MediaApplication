@@ -106,6 +106,8 @@ export default (() => {
         fs.mkdirSync(`./uploads`);
       }
 
+      req.setTimeout(7200000);
+
       const { myTokenFront } = req.body;
 
       const filesNames = [];
