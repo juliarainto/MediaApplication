@@ -34,17 +34,17 @@ This installation is tested to work on Ubuntu 16.04 system and Nginx software.
 
 ## SYSTEM REQUIREMENTS AND RECOMMENDATIONS
 
-* Server should have at least 4GB RAM, so that the program will run smoothly.
+Server should have at least 4GB RAM, so that the program will run smoothly.
 
-* Client folders files should all be minified.
+Client folders files should all be minified.
 
-* Gzip is recommended to be installed on the server, to assure faster content loading.
+Gzip is recommended to be installed on the server, to assure faster content loading.
 
-* Client folders main.js and video.js files that uses ECMAScript 6 should first be run through Babel (https://babeljs.io/repl), Choose only the following settings: 
+Client folders main.js and video.js files that uses ECMAScript 6 should first be run through Babel (https://babeljs.io/repl), Choose only the following settings: 
 
-** SETTINGS: Line Wrap and Minify
+* SETTINGS: Line Wrap and Minify
 
-** PRESETS: es2015 and stage-2
+* PRESETS: es2015 and stage-2
 
 ## APPLICATION CONFIGURATION
 
