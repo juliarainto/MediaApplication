@@ -22,7 +22,3 @@ Client:
 
 Build:
 > npm build
-
-```
-./root/bashrc
-```
