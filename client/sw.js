@@ -1,4 +1,4 @@
-var cacheName = 'mediapakkaaja';
+var cacheName = 'Media Compressor';
 var cacheFiles = ['/content/img/feather.jpeg', '/content/img/springs.jpeg'];
 
 self.addEventListener('install', function (event) {
