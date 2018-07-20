@@ -6,7 +6,7 @@ Server-side: Node.js, Express
 
 Demo here: https://juliarainto.com/apps/mediapakkaaja
 
-```
+
 Start
 > npm install -g http-server
 
@@ -20,7 +20,6 @@ Client:
 > http-server
 > open browser to: http://localhost:8080
 
-```
 Build:
 > npm build
-```
+
