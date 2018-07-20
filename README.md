@@ -163,7 +163,6 @@ cd /var/www/html/apps
 At the server folder run the command `npm install` and after that, run the pm2 command and replace mediacompressor with desired folder name: 
 
 ```
-npm install 
 pm2 start --watch --interpreter babel-cli server.js --name apps mediacompressor
 ```
 After installation run command: 
