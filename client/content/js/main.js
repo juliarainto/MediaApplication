@@ -134,7 +134,7 @@ const uploadFileAndAddCompressedToBody = async file => {
               />
           </div
               <br/>
-              <div style='margin-bottom: 20px'>
+              <div style='margin: 10px 0 20px 0'>
               <p style='text-align: center; '><span class="teal-text" style="font-weight:bold"> Original size: </span> ${
                 dataFields.originalSize
               }</p>
