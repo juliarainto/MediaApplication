@@ -68,7 +68,7 @@ apt-get remove nodered -y
 apt-get remove nodejs nodejs-legacy -y
 exit
 ```
-Install n, that will install latest Node.js: 
+Install curl and n, that will install latest Node.js: 
 
 ```
 sudo apt-get install curl
