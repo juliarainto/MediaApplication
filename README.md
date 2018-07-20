@@ -160,7 +160,7 @@ Nginx example:
 cd /var/www/html/apps
 ```
 
-At the server folder run the command `npm install` (Picture 19) and after that, run the pm2 command and replace mediacompressor with desired folder name: 
+At the server folder run the command `npm install` and after that, run the pm2 command and replace mediacompressor with desired folder name: 
 
 ```
 npm install 
