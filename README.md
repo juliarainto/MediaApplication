@@ -71,6 +71,7 @@ exit
 Install n, that will install latest Node.js: 
 
 ```
+sudo apt-get install curl
 curl -L https://git.io/n-install | bash
 ```
 * Installation asks y/N, push y
