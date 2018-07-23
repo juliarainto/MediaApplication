@@ -135,12 +135,18 @@ export default (() => {
                     quality: 75
                   }),
                   imagemin.svgo({
-                    plugins: [
-                      {
-                        removeViewBox: true
+                    multipass: true, // best compression
+                    plugins: [{
+                        removeViewBox: true // IE and Edge require view box
                       },
                       {
-                        cleanupIDs: false
+                        cleanupIDs: false  //unused by svg file, but what about website?
+                      }, 
+                      {
+                        removeUselessStrokeAndFill: false // are strokes and fill really unuseful?
+                      },
+                      {
+                        removeEmptyAttrs: false // allowed by HTML5
                       }
                     ]
                   })
